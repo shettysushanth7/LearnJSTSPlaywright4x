@@ -26,6 +26,9 @@ A chapter-by-chapter learning repo for testers moving into JavaScript, TypeScrip
   - [07: Naming Conventions](#07-naming-conventions)
   - [08: Comments](#08-comments)
   - [09: Interview Questions on Identifiers](#09-interview-questions-on-identifiers)
+- [Chapter 03: Literals](#chapter-03-literals)
+- [Chapter 04: JavaScript Operators](#chapter-04-javascript-operators)
+- [Chapter 05: Increment and Decrement](#chapter-05-increment-and-decrement)
 - [Coming Up](#coming-up)
 
 ---
@@ -36,8 +39,10 @@ A chapter-by-chapter learning repo for testers moving into JavaScript, TypeScrip
 flowchart LR
     C0["00 Prompt Engineering<br/>RICE-POT"]:::done --> C1["01 JS Basics<br/>Hello World, Math"]:::done
     C1 --> C2["02 Keywords and Identifiers<br/>var/let/const, naming, comments"]:::progress
-    C2 --> C3["03 Literals"]:::planned
-    C3 --> TS["TypeScript"]:::planned
+    C2 --> C3["03 Literals"]:::progress
+    C3 --> C4["04 Operators"]:::progress
+    C4 --> C5["05 Increment and Decrement"]:::progress
+    C5 --> TS["TypeScript"]:::planned
     TS --> PW["Playwright"]:::planned
 
     classDef done fill:#d1fae5,stroke:#059669,color:#064e3b
@@ -54,7 +59,9 @@ flowchart LR
 | 00 | Prompt Engineering | [00_chapter_Prompt_Eng](00_chapter_Prompt_Eng/) | ✅ Done | RICE-POT prompts, anti-hallucination rules, the Selenium framework a prompt generated |
 | 01 | JavaScript Basics | [01_chapter_JS_Basics](01_chapter_JS_Basics/) | ✅ Done | Running a file with Node, `console.log`, arithmetic expressions |
 | 02 | Keywords and Identifiers | [02_chapter_JS_Keywrods_Identifiers](02_chapter_JS_Keywrods_Identifiers/) | 🟡 In progress | How V8 runs code, `var`/`let`/`const`, identifier rules, naming conventions, comments |
-| 03 | Literals | `03_chapter_JS_Literals` | ⏳ Planned | Number, string, boolean, array and object literals |
+| 03 | Literals | [03_chapter_JS_literals](03_chapter_JS_literals/) | 🟡 In progress | Number formats, strings, null and undefined |
+| 04 | JavaScript Operators | [04_chapter_js_operators](04_chapter_js_operators/) | 🟡 In progress | Assignment, arithmetic, comparison, logical and ternary operators |
+| 05 | Increment and Decrement | [05_chapter_JS_Incre_Decre_OP](05_chapter_JS_Incre_Decre_OP/) | 🟡 In progress | Prefix and postfix updates, evaluation order and nullish coalescing |
 
 ---
 
@@ -82,7 +89,11 @@ LearnJSTSPlaywright4x/
 │   ├── 07_IND_Rules2.js                    # Naming conventions: camelCase, PascalCase, ...
 │   ├── 08_Comments.js                      # Single-line, multi-line and JSDoc comments
 │   └── 09_IQ.js                            # Interview drill: valid vs invalid identifiers
-└── 03_chapter_JS_Literals/                 # (planned)
+├── 03_chapter_JS_literals/                 # Number, string, null and undefined examples
+├── 04_chapter_js_operators/                # Assignment, arithmetic, comparison, logic and ternary
+├── 05_chapter_JS_Incre_Decre_OP/            # Prefix, postfix and nullish coalescing examples
+└── assets/
+    └── images/                              # Chapter concept illustrations used below
 ```
 
 ---
@@ -492,7 +503,36 @@ let A = "Unicode escape for A";  // this variable is named A
 
 ---
 
+## Chapter 03: Literals
+
+![Illustration of JavaScript literal value types](assets/images/javascript-literals.svg)
+
+Literals are values written directly in code. The lessons cover JavaScript number formats, strings, `null`, and `undefined`, with examples you can run individually.
+
+Lessons: [`10_Lterals.js`](03_chapter_JS_literals/10_Lterals.js), [`11_NumberL.js`](03_chapter_JS_literals/11_NumberL.js), [`12_null_undefined.js`](03_chapter_JS_literals/12_null_undefined.js), [`13.null.js`](03_chapter_JS_literals/13.null.js), [`14_Literals.js`](03_chapter_JS_literals/14_Literals.js), [`15.number.js`](03_chapter_JS_literals/15.number.js), [`16_numbers_part2.js`](03_chapter_JS_literals/16_numbers_part2.js), [`17_special-js`](03_chapter_JS_literals/17_special-js), and [`18_undefined.js`](03_chapter_JS_literals/18_undefined.js).
+
+---
+
+## Chapter 04: JavaScript Operators
+
+![Illustration of JavaScript operator categories](assets/images/javascript-operators.svg)
+
+Operators act on values to assign, calculate, compare, combine conditions, and choose between expressions. These lessons include practical examples and interview-style questions, including the difference between loose (`==`) and strict (`===`) equality.
+
+Lessons: [`19_Arch.js`](04_chapter_js_operators/19_Arch.js), [`20_AssignmentOps.js`](04_chapter_js_operators/20_AssignmentOps.js), [`21_Arithmetic_OP.js`](04_chapter_js_operators/21_Arithmetic_OP.js), [`22_Comparison_OP.js`](04_chapter_js_operators/22_Comparison_OP.js), [`23_Logica_Op.js`](04_chapter_js_operators/23_Logica_Op.js), [`24_Confusing_Comparison.js`](04_chapter_js_operators/24_Confusing_Comparison.js), [`25_CC.js`](04_chapter_js_operators/25_CC.js), [`26_Questions.js`](04_chapter_js_operators/26_Questions.js), [`27_Strings.js`](04_chapter_js_operators/27_Strings.js), [`28_Ternary_OP.js`](04_chapter_js_operators/28_Ternary_OP.js), [`29_T_OP.js`](04_chapter_js_operators/29_T_OP.js), [`30-IQ.js`](04_chapter_js_operators/30-IQ.js), [`31_IQ.js`](04_chapter_js_operators/31_IQ.js), [`32_IQ.js`](04_chapter_js_operators/32_IQ.js), [`33_IQ.js`](04_chapter_js_operators/33_IQ.js), [`34_Netsed_Ternary.js`](04_chapter_js_operators/34_Netsed_Ternary.js), [`35_IQ.js`](04_chapter_js_operators/35_IQ.js), [`36_IQ.js`](04_chapter_js_operators/36_IQ.js), and [`37_TypeOf.js`](04_chapter_js_operators/37_TypeOf.js).
+
+---
+
+## Chapter 05: Increment and Decrement
+
+![Illustration of prefix, postfix, and nullish coalescing](assets/images/javascript-increment-decrement.svg)
+
+The increment and decrement lessons show how `++` and `--` update a variable, and why prefix and postfix expressions can produce different values during the same operation. The final lesson introduces `??`, which uses a fallback only when the left side is `null` or `undefined`.
+
+Lessons: [`38_ID_OP.js`](05_chapter_JS_Incre_Decre_OP/38_ID_OP.js), [`39_ID.js`](05_chapter_JS_Incre_Decre_OP/39_ID.js), [`40_IQ.js`](05_chapter_JS_Incre_Decre_OP/40_IQ.js), [`41_IQ.js`](05_chapter_JS_Incre_Decre_OP/41_IQ.js), [`42_IQ.js`](05_chapter_JS_Incre_Decre_OP/42_IQ.js), [`43_Decre.js`](05_chapter_JS_Incre_Decre_OP/43_Decre.js), [`44_JS.js`](05_chapter_JS_Incre_Decre_OP/44_JS.js), and [`45.Nullish.js`](05_chapter_JS_Incre_Decre_OP/45.Nullish.js).
+
+---
+
 ## Coming Up
 
-- **Chapter 03: Literals**: number, string, boolean, array, and object literals in depth.
-- Then TypeScript, then Playwright.
+- More JavaScript lessons, then TypeScript, then Playwright.

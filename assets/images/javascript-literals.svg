@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">JavaScript literals</title>
+  <desc id="desc">Examples of number, string, boolean, and special JavaScript values.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="24" fill="url(#bg)"/>
+  <text x="48" y="58" fill="#f8fafc" font-family="Arial, sans-serif" font-size="30" font-weight="700">JavaScript literals</text>
+  <text x="48" y="88" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16">Values written directly in your code</text>
+  <g font-family="Menlo, Consolas, monospace">
+    <rect x="48" y="116" width="258" height="140" rx="16" fill="#1d4ed8" fill-opacity=".22" stroke="#60a5fa"/>
+    <text x="70" y="152" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="18" font-weight="700">NUMBER</text>
+    <text x="70" y="195" fill="#f8fafc" font-size="21">42 · 3.14 · 0x2A</text>
+    <text x="70" y="228" fill="#93c5fd" font-size="15">decimal, float, hex</text>
+    <rect x="330" y="116" width="258" height="140" rx="16" fill="#7e22ce" fill-opacity=".2" stroke="#c084fc"/>
+    <text x="352" y="152" fill="#e9d5ff" font-family="Arial, sans-serif" font-size="18" font-weight="700">STRING</text>
+    <text x="352" y="195" fill="#f8fafc" font-size="21">"hello" · `world`</text>
+    <text x="352" y="228" fill="#d8b4fe" font-size="15">text in quotes</text>
+    <rect x="612" y="116" width="258" height="140" rx="16" fill="#047857" fill-opacity=".22" stroke="#34d399"/>
+    <text x="634" y="152" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="18" font-weight="700">BOOLEAN</text>
+    <text x="634" y="195" fill="#f8fafc" font-size="21">true · false</text>
+    <text x="634" y="228" fill="#6ee7b7" font-size="15">two logical values</text>
+    <rect x="894" y="116" width="258" height="140" rx="16" fill="#b45309" fill-opacity=".22" stroke="#fbbf24"/>
+    <text x="916" y="152" fill="#fde68a" font-family="Arial, sans-serif" font-size="18" font-weight="700">SPECIAL VALUES</text>
+    <text x="916" y="195" fill="#f8fafc" font-size="21">null · undefined</text>
+    <text x="916" y="228" fill="#fcd34d" font-size="15">distinct meanings</text>
+  </g>
+</svg>
