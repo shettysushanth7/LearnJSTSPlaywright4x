@@ -29,6 +29,9 @@ A chapter-by-chapter learning repo for testers moving into JavaScript, TypeScrip
 - [Chapter 03: Literals](#chapter-03-literals)
 - [Chapter 04: JavaScript Operators](#chapter-04-javascript-operators)
 - [Chapter 05: Increment and Decrement](#chapter-05-increment-and-decrement)
+- [Chapter 06: If/Else Conditions](#chapter-06-ifelse-conditions)
+- [Chapter 07: Switch Statements](#chapter-07-switch-statements)
+- [Chapter 08: User Input](#chapter-08-user-input)
 - [Coming Up](#coming-up)
 
 ---
@@ -62,6 +65,9 @@ flowchart LR
 | 03 | Literals | [03_chapter_JS_literals](03_chapter_JS_literals/) | 🟡 In progress | Number formats, strings, null and undefined |
 | 04 | JavaScript Operators | [04_chapter_js_operators](04_chapter_js_operators/) | 🟡 In progress | Assignment, arithmetic, comparison, logical and ternary operators |
 | 05 | Increment and Decrement | [05_chapter_JS_Incre_Decre_OP](05_chapter_JS_Incre_Decre_OP/) | 🟡 In progress | Prefix and postfix updates, evaluation order and nullish coalescing |
+| 06 | If/Else Conditions | [06_chapter_if_else_statement_conditions](06_chapter_if_else_statement_conditions/) | 🟡 In progress | Conditional branches, nested conditions and multiple cases |
+| 07 | Switch Statements | [07_chapter_switch](07_chapter_switch/) | 🟡 In progress | Matching cases, `break`, `default` and grouped cases |
+| 08 | User Input | [08_chapter_user_input](08_chapter_user_input/) | 🟡 In progress | Reading input with prompts, Node.js readline and standard input |
 
 ---
 
@@ -92,8 +98,11 @@ LearnJSTSPlaywright4x/
 ├── 03_chapter_JS_literals/                 # Number, string, null and undefined examples
 ├── 04_chapter_js_operators/                # Assignment, arithmetic, comparison, logic and ternary
 ├── 05_chapter_JS_Incre_Decre_OP/            # Prefix, postfix and nullish coalescing examples
+├── 06_chapter_if_else_statement_conditions/ # if/else conditions and branching
+├── 07_chapter_switch/                       # switch cases and grouped choices
+├── 08_chapter_user_input/                   # Prompt, readline and stdin examples
 └── assets/
-    └── images/                              # Chapter concept illustrations used below
+    └── images/                              # Chapter illustrations and handwritten-style notes
 ```
 
 ---
@@ -530,6 +539,36 @@ Lessons: [`19_Arch.js`](04_chapter_js_operators/19_Arch.js), [`20_AssignmentOps.
 The increment and decrement lessons show how `++` and `--` update a variable, and why prefix and postfix expressions can produce different values during the same operation. The final lesson introduces `??`, which uses a fallback only when the left side is `null` or `undefined`.
 
 Lessons: [`38_ID_OP.js`](05_chapter_JS_Incre_Decre_OP/38_ID_OP.js), [`39_ID.js`](05_chapter_JS_Incre_Decre_OP/39_ID.js), [`40_IQ.js`](05_chapter_JS_Incre_Decre_OP/40_IQ.js), [`41_IQ.js`](05_chapter_JS_Incre_Decre_OP/41_IQ.js), [`42_IQ.js`](05_chapter_JS_Incre_Decre_OP/42_IQ.js), [`43_Decre.js`](05_chapter_JS_Incre_Decre_OP/43_Decre.js), [`44_JS.js`](05_chapter_JS_Incre_Decre_OP/44_JS.js), and [`45.Nullish.js`](05_chapter_JS_Incre_Decre_OP/45.Nullish.js).
+
+---
+
+## Chapter 06: If/Else Conditions
+
+![Handwritten-style study note about JavaScript if and else conditions](assets/images/notes-if-else.svg)
+
+Use `if` and `else` to choose a path based on a true-or-false condition. The lessons build from a simple condition to nested and multiple branches.
+
+Lessons: [`46_if.js`](06_chapter_if_else_statement_conditions/46_if.js), [`47_if_else_nested.js`](06_chapter_if_else_statement_conditions/47_if_else_nested.js), [`48_To_if_else.js`](06_chapter_if_else_statement_conditions/48_To_if_else.js), and [`49_Multiple_if_else.js`](06_chapter_if_else_statement_conditions/49_Multiple_if_else.js).
+
+---
+
+## Chapter 07: Switch Statements
+
+![Handwritten-style study note about JavaScript switch statements](assets/images/notes-switch.svg)
+
+Use `switch` when one value needs to be compared against several cases. `break` prevents execution from falling through to the next case, while `default` handles values with no match.
+
+Lessons: [`50_switch.js`](07_chapter_switch/50_switch.js), [`51_IQ.js`](07_chapter_switch/51_IQ.js), [`52_IQ.js`](07_chapter_switch/52_IQ.js), [`53_API_Switch.js`](07_chapter_switch/53_API_Switch.js), [`54_Switch_group.js`](07_chapter_switch/54_Switch_group.js), [`55_IQ.js`](07_chapter_switch/55_IQ.js), [`56_IQ.js`](07_chapter_switch/56_IQ.js), [`57_IQ.js`](07_chapter_switch/57_IQ.js), and [`58_IQ.js`](07_chapter_switch/58_IQ.js).
+
+---
+
+## Chapter 08: User Input
+
+![Handwritten-style study note about reading user input in Node.js](assets/images/notes-user-input.svg)
+
+These examples explore prompt-based input and Node.js terminal input with `readline`, `prompt-sync`, and the filesystem API. In [`62_FS_readfile.js`](08_chapter_user_input/62_FS_readfile.js), `readFileSync(0, "utf8")` reads standard input until end-of-file. Run it with `node 08_chapter_user_input/62_FS_readfile.js`, type a value, then press `Ctrl+D` on macOS/Linux (or `Ctrl+Z`, then Enter, on Windows) to finish input.
+
+Lessons: [`59_UI.js`](08_chapter_user_input/59_UI.js), [`60_node_Ui.js`](08_chapter_user_input/60_node_Ui.js), [`61_Prompt_sync.js`](08_chapter_user_input/61_Prompt_sync.js), and [`62_FS_readfile.js`](08_chapter_user_input/62_FS_readfile.js).
 
 ---
 
