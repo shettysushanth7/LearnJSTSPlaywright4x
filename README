@@ -32,6 +32,9 @@ A chapter-by-chapter learning repo for testers moving into JavaScript, TypeScrip
 - [Chapter 06: If/Else Conditions](#chapter-06-ifelse-conditions)
 - [Chapter 07: Switch Statements](#chapter-07-switch-statements)
 - [Chapter 08: User Input](#chapter-08-user-input)
+- [Chapter 09: For Loops](#chapter-09-for-loops)
+- [Chapter 10: While Loops](#chapter-10-while-loops)
+- [Chapter 11: Do-While and Nested Loops](#chapter-11-do-while-and-nested-loops)
 - [Coming Up](#coming-up)
 
 ---
@@ -45,7 +48,13 @@ flowchart LR
     C2 --> C3["03 Literals"]:::progress
     C3 --> C4["04 Operators"]:::progress
     C4 --> C5["05 Increment and Decrement"]:::progress
-    C5 --> TS["TypeScript"]:::planned
+    C5 --> C6["06 If/Else"]:::progress
+    C6 --> C7["07 Switch"]:::progress
+    C7 --> C8["08 User Input"]:::progress
+    C8 --> C9["09 For Loops"]:::progress
+    C9 --> C10["10 While Loops"]:::progress
+    C10 --> C11["11 Do-While Loops"]:::progress
+    C11 --> TS["TypeScript"]:::planned
     TS --> PW["Playwright"]:::planned
 
     classDef done fill:#d1fae5,stroke:#059669,color:#064e3b
@@ -68,6 +77,9 @@ flowchart LR
 | 06 | If/Else Conditions | [06_chapter_if_else_statement_conditions](06_chapter_if_else_statement_conditions/) | 🟡 In progress | Conditional branches, nested conditions and multiple cases |
 | 07 | Switch Statements | [07_chapter_switch](07_chapter_switch/) | 🟡 In progress | Matching cases, `break`, `default` and grouped cases |
 | 08 | User Input | [08_chapter_user_input](08_chapter_user_input/) | 🟡 In progress | Reading input with prompts, Node.js readline and standard input |
+| 09 | For Loops | [09_chapter_loops](09_chapter_loops/) | 🟡 In progress | Repeating code with initialization, condition and update |
+| 10 | While Loops | [10_chapter_while_loops](10_chapter_while_loops/) | 🟡 In progress | Condition-controlled repetition and `break` |
+| 11 | Do-While and Nested Loops | [11_chapter_do_while_loops](11_chapter_do_while_loops/) | 🟡 In progress | Post-tested loops, nested loops and loop conditions |
 
 ---
 
@@ -101,6 +113,9 @@ LearnJSTSPlaywright4x/
 ├── 06_chapter_if_else_statement_conditions/ # if/else conditions and branching
 ├── 07_chapter_switch/                       # switch cases and grouped choices
 ├── 08_chapter_user_input/                   # Prompt, readline and stdin examples
+├── 09_chapter_loops/                        # for loops and loop practice
+├── 10_chapter_while_loops/                  # while loops and break
+├── 11_chapter_do_while_loops/               # do-while and nested loop practice
 └── assets/
     └── images/                              # Chapter illustrations and handwritten-style notes
 ```
@@ -569,6 +584,36 @@ Lessons: [`50_switch.js`](07_chapter_switch/50_switch.js), [`51_IQ.js`](07_chapt
 These examples explore prompt-based input and Node.js terminal input with `readline`, `prompt-sync`, and the filesystem API. In [`62_FS_readfile.js`](08_chapter_user_input/62_FS_readfile.js), `readFileSync(0, "utf8")` reads standard input until end-of-file. Run it with `node 08_chapter_user_input/62_FS_readfile.js`, type a value, then press `Ctrl+D` on macOS/Linux (or `Ctrl+Z`, then Enter, on Windows) to finish input.
 
 Lessons: [`59_UI.js`](08_chapter_user_input/59_UI.js), [`60_node_Ui.js`](08_chapter_user_input/60_node_Ui.js), [`61_Prompt_sync.js`](08_chapter_user_input/61_Prompt_sync.js), and [`62_FS_readfile.js`](08_chapter_user_input/62_FS_readfile.js).
+
+---
+
+## Chapter 09: For Loops
+
+![Handwritten-style study note about JavaScript for loops](assets/images/notes-for-loops.svg)
+
+A `for` loop brings initialization, a continuation condition, and an update together. The examples count, explore loop conditions, and show how an `if` can choose behavior during each iteration.
+
+Lessons: [`63_loops.js`](09_chapter_loops/63_loops.js), [`64_for_loop.js`](09_chapter_loops/64_for_loop.js), [`65_for_loop.js`](09_chapter_loops/65_for_loop.js), [`66_IQ.js`](09_chapter_loops/66_IQ.js), [`67_IQ.js`](09_chapter_loops/67_IQ.js), [`68_IQ.js`](09_chapter_loops/68_IQ.js), and [`69_IQ.js`](09_chapter_loops/69_IQ.js).
+
+---
+
+## Chapter 10: While Loops
+
+![Handwritten-style study note about JavaScript while loops](assets/images/notes-while-loops.svg)
+
+A `while` loop checks its condition before each pass. Initialize and update the loop variable so the condition can eventually become false; use `break` when a loop should stop early.
+
+Lessons: [`70.js`](10_chapter_while_loops/70.js), [`71_IQ.js`](10_chapter_while_loops/71_IQ.js), [`72.js`](10_chapter_while_loops/72.js), and [`73_break_IQ.js`](10_chapter_while_loops/73_break_IQ.js).
+
+---
+
+## Chapter 11: Do-While and Nested Loops
+
+![Handwritten-style study note about do-while and nested JavaScript loops](assets/images/notes-do-while-loops.svg)
+
+A `do...while` loop checks its condition after the body, so its body runs at least once. The chapter also introduces nested loops; [`77_IQ.js`](11_chapter_do_while_loops/77_IQ.js) demonstrates that a `for` loop whose condition is false at the start does not run its body.
+
+Lessons: [`74.js`](11_chapter_do_while_loops/74.js), [`75_IQ.js`](11_chapter_do_while_loops/75_IQ.js), [`76_Nested.js`](11_chapter_do_while_loops/76_Nested.js), and [`77_IQ.js`](11_chapter_do_while_loops/77_IQ.js).
 
 ---
 

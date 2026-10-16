@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Handwritten study note: for loops</title>
+  <desc id="desc">A ruled-paper note showing the initialization, condition, body, and update steps of a JavaScript for loop.</desc>
+  <rect width="1200" height="320" rx="18" fill="#fff9e9"/>
+  <path d="M13 16 Q46 5 88 14 L1182 12 Q1195 76 1185 151 Q1197 230 1184 306 Q1050 315 908 306 Q696 316 501 307 Q270 316 14 304 Q5 202 15 111 Q7 54 13 16Z" fill="none" stroke="#c9ad76" stroke-width="3"/>
+  <path d="M0 75H1200 M0 121H1200 M0 167H1200 M0 213H1200 M0 259H1200 M0 305H1200" stroke="#b9d7e8" stroke-width="1.5"/>
+  <path d="M85 10 Q82 160 86 310" stroke="#e7a0a0" stroke-width="2"/>
+  <text x="125" y="59" fill="#253b67" font-family="Comic Sans MS, Segoe Print, cursive" font-size="34" font-weight="700" transform="rotate(-1 125 59)">For loop = repeat with a counter</text>
+  <text x="130" y="110" fill="#323e56" font-family="Comic Sans MS, Segoe Print, cursive" font-size="25">for (let i = 0; i &lt; 5; i++) { ... }</text>
+  <text x="155" y="156" fill="#323e56" font-family="Comic Sans MS, Segoe Print, cursive" font-size="23">start → check condition → run body → update</text>
+  <path d="M163 172 Q397 183 623 170" fill="none" stroke="#e77e54" stroke-width="4" stroke-linecap="round"/>
+  <text x="130" y="202" fill="#323e56" font-family="Comic Sans MS, Segoe Print, cursive" font-size="23">The condition is checked before every pass.</text>
+  <text x="130" y="255" fill="#9a513f" font-family="Comic Sans MS, Segoe Print, cursive" font-size="21" transform="rotate(-1 130 255)">No condition? Be careful: the loop may never stop!</text>
+  <path d="M820 226 Q882 213 918 180 Q946 155 946 124" fill="none" stroke="#56846f" stroke-width="3" stroke-linecap="round"/>
+  <path d="M936 138 L946 121 L956 138" fill="none" stroke="#56846f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="963" y="244" fill="#56846f" font-family="Comic Sans MS, Segoe Print, cursive" font-size="20" transform="rotate(3 963 244)">count one step at a time</text>
+  <path d="M1060 37 Q1097 25 1135 41 Q1152 64 1133 78 Q1093 85 1060 70Z" fill="#f5dc85" opacity=".8" transform="rotate(5 1105 52)"/>
+  <text x="1071" y="61" fill="#6a5831" font-family="Comic Sans MS, Segoe Print, cursive" font-size="15" transform="rotate(5 1071 61)">JS notes</text>
+</svg>
