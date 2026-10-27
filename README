@@ -36,6 +36,8 @@ A chapter-by-chapter learning repo for testers moving into JavaScript, TypeScrip
 - [Chapter 10: While Loops](#chapter-10-while-loops)
 - [Chapter 11: Do-While and Nested Loops](#chapter-11-do-while-and-nested-loops)
 - [Chapter 12: Arrays](#chapter-12-arrays)
+- [Chapter 13: Functions](#chapter-13-functions)
+- [Chapter 14: var, let, const, Hoisting and TDZ](#chapter-14-var-let-const-hoisting-and-tdz)
 - [Coming Up](#coming-up)
 
 ---
@@ -56,7 +58,9 @@ flowchart LR
     C9 --> C10["10 While Loops"]:::progress
     C10 --> C11["11 Do-While Loops"]:::progress
     C11 --> C12["12 Arrays"]:::progress
-    C12 --> TS["TypeScript"]:::planned
+    C12 --> C13["13 Functions"]:::progress
+    C13 --> C14["14 var / let / const"]:::progress
+    C14 --> TS["TypeScript"]:::planned
     TS --> PW["Playwright"]:::planned
 
     classDef done fill:#d1fae5,stroke:#059669,color:#064e3b
@@ -82,7 +86,9 @@ flowchart LR
 | 09 | For Loops | [09_chapter_loops](09_chapter_loops/) | 🟡 In progress | Repeating code with initialization, condition and update |
 | 10 | While Loops | [10_chapter_while_loops](10_chapter_while_loops/) | 🟡 In progress | Condition-controlled repetition and `break` |
 | 11 | Do-While and Nested Loops | [11_chapter_do_while_loops](11_chapter_do_while_loops/) | 🟡 In progress | Post-tested loops, nested loops and loop conditions |
-| 12 | Arrays | [12_chapter_arrays](12_chapter_arrays/) | 🟡 In progress | Creating, accessing, modifying, searching, iterating and transforming arrays |
+| 12 | Arrays | [12_chapter_arrays](12_chapter_arrays/) | 🟡 In progress | Creating, accessing, modifying, sorting, searching, slicing, iterating and transforming arrays |
+| 13 | Functions | [13_chapter_functions](13_chapter_functions/) | 🟡 In progress | Function declarations, parameters, return values, expressions, arrows, IIFEs and spread |
+| 14 | var, let, const, Hoisting and TDZ | [14_chapter_var_let_const_hoisting_TDZ](14_chapter_var_let_const_hoisting_TDZ/) | 🟡 In progress | Variable declarations, scope, hoisting and the temporal dead zone |
 
 ---
 
@@ -120,6 +126,8 @@ LearnJSTSPlaywright4x/
 ├── 10_chapter_while_loops/                  # while loops and break
 ├── 11_chapter_do_while_loops/               # do-while and nested loop practice
 ├── 12_chapter_arrays/                       # Array creation, access, search and transformations
+├── 13_chapter_functions/                    # Function forms, parameters, returns and arrow functions
+├── 14_chapter_var_let_const_hoisting_TDZ/    # Declaration keywords, scope and initialization
 └── assets/
     └── images/                              # Chapter illustrations and handwritten-style notes
 ```
@@ -628,6 +636,28 @@ Lessons: [`74.js`](11_chapter_do_while_loops/74.js), [`75_IQ.js`](11_chapter_do_
 Arrays store ordered collections of values. These examples cover creating arrays, reading and changing elements, adding and removing items, searching, iterating, and transforming data with `map` and `filter`. In [`89_Arrays_transform.js`](12_chapter_arrays/89_Arrays_transform.js), `map` creates pass/fail labels while `filter` selects scores of 70 or higher.
 
 Lessons: [`78_Arrays.js`](12_chapter_arrays/78_Arrays.js), [`79_Arrays.js`](12_chapter_arrays/79_Arrays.js), [`80_Arrays.js`](12_chapter_arrays/80_Arrays.js), [`81_Arrays.js`](12_chapter_arrays/81_Arrays.js), [`82_Create.js`](12_chapter_arrays/82_Create.js), [`83_Access_modify.js`](12_chapter_arrays/83_Access_modify.js), [`84_Adding_remove.js`](12_chapter_arrays/84_Adding_remove.js), [`85_Arrays.js`](12_chapter_arrays/85_Arrays.js), [`86_Searching.js`](12_chapter_arrays/86_Searching.js), [`87_Find.js`](12_chapter_arrays/87_Find.js), [`88_Iterate.js`](12_chapter_arrays/88_Iterate.js), and [`89_Arrays_transform.js`](12_chapter_arrays/89_Arrays_transform.js).
+
+Additional lessons cover [`90_Array_Sorting.js`](12_chapter_arrays/90_Array_Sorting.js), [`91_Array_Sorting.js`](12_chapter_arrays/91_Array_Sorting.js) ([lexicographic sorting notes](12_chapter_arrays/91_Lexicographic_Explain.md)), [`92_Array_normal_sorting.js`](12_chapter_arrays/92_Array_normal_sorting.js), [`93_Array_Slicing.js`](12_chapter_arrays/93_Array_Slicing.js) ([slice explanation](12_chapter_arrays/93_Slice_explain.md)), [`94_Array_concat.js`](12_chapter_arrays/94_Array_concat.js), [`95_Array_Check.js`](12_chapter_arrays/95_Array_Check.js), [`96_Array_transform.js`](12_chapter_arrays/96_Array_transform.js), [`97_Array_Copy.js`](12_chapter_arrays/97_Array_Copy.js), [`98_Array_Desctruction.js`](12_chapter_arrays/98_Array_Desctruction.js), and [`99.js`](12_chapter_arrays/99.js).
+
+---
+
+## Chapter 13: Functions
+
+![Handwritten-style study note about JavaScript functions](assets/images/notes-functions.svg)
+
+Functions package reusable steps. The examples introduce declarations and calls, parameters and return values, function expressions, arrow functions, template literals, immediately invoked functions, and rest/spread syntax.
+
+Lessons: [`101_Functions.js`](13_chapter_functions/101_Functions.js), [`102_type1.js`](13_chapter_functions/102_type1.js), [`103_Type2_Fun.js`](13_chapter_functions/103_Type2_Fun.js), [`104_Type3_fun.js`](13_chapter_functions/104_Type3_fun.js), [`105_Type4_Fun.js`](13_chapter_functions/105_Type4_Fun.js), [`106_Template_Literals.js`](13_chapter_functions/106_Template_Literals.js), [`107_Fn_explain.js`](13_chapter_functions/107_Fn_explain.js), [`108_Fn_Arrow.js`](13_chapter_functions/108_Fn_Arrow.js), [`109_Arrow.js`](13_chapter_functions/109_Arrow.js), [`110_Arrow_multiple.js`](13_chapter_functions/110_Arrow_multiple.js), [`110_Fn.js`](13_chapter_functions/110_Fn.js), [`112_Fn_real.js`](13_chapter_functions/112_Fn_real.js), [`113_fn.js`](13_chapter_functions/113_fn.js), [`114_Spread_as_arguement_fn.js`](13_chapter_functions/114_Spread_as_arguement_fn.js), [`115_Fn_return.js`](13_chapter_functions/115_Fn_return.js), and [`116_return_fn.js`](13_chapter_functions/116_return_fn.js).
+
+---
+
+## Chapter 14: var, let, const, Hoisting and TDZ
+
+![Handwritten-style study note about var, let, const, hoisting and the temporal dead zone](assets/images/notes-hoisting-tdz.svg)
+
+These lessons compare `var`, `let`, and `const`, including function and block scope. The chapter introduces hoisting and the temporal dead zone (TDZ): `var` declarations are initialized to `undefined`, while lexical declarations (`let` and `const`) cannot be accessed before their declaration is evaluated. `const` prevents reassignment of its binding; it does not make an object or array deeply immutable.
+
+Lessons: [`117.js`](14_chapter_var_let_const_hoisting_TDZ/117.js), [`118_Var_let_const.js`](14_chapter_var_let_const_hoisting_TDZ/118_Var_let_const.js), [`119_let.js`](14_chapter_var_let_const_hoisting_TDZ/119_let.js), and [`120_const.js`](14_chapter_var_let_const_hoisting_TDZ/120_const.js).
 
 ---
 
