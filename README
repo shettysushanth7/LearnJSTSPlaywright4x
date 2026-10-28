@@ -38,6 +38,8 @@ A chapter-by-chapter learning repo for testers moving into JavaScript, TypeScrip
 - [Chapter 12: Arrays](#chapter-12-arrays)
 - [Chapter 13: Functions](#chapter-13-functions)
 - [Chapter 14: var, let, const, Hoisting and TDZ](#chapter-14-var-let-const-hoisting-and-tdz)
+- [Chapter 15: Closures](#chapter-15-closures)
+- [Chapter 16: Strings](#chapter-16-strings)
 - [Coming Up](#coming-up)
 
 ---
@@ -60,7 +62,9 @@ flowchart LR
     C11 --> C12["12 Arrays"]:::progress
     C12 --> C13["13 Functions"]:::progress
     C13 --> C14["14 var / let / const"]:::progress
-    C14 --> TS["TypeScript"]:::planned
+    C14 --> C15["15 Closures"]:::progress
+    C15 --> C16["16 Strings"]:::progress
+    C16 --> TS["TypeScript"]:::planned
     TS --> PW["Playwright"]:::planned
 
     classDef done fill:#d1fae5,stroke:#059669,color:#064e3b
@@ -89,6 +93,8 @@ flowchart LR
 | 12 | Arrays | [12_chapter_arrays](12_chapter_arrays/) | 🟡 In progress | Creating, accessing, modifying, sorting, searching, slicing, iterating and transforming arrays |
 | 13 | Functions | [13_chapter_functions](13_chapter_functions/) | 🟡 In progress | Function declarations, parameters, return values, expressions, arrows, IIFEs and spread |
 | 14 | var, let, const, Hoisting and TDZ | [14_chapter_var_let_const_hoisting_TDZ](14_chapter_var_let_const_hoisting_TDZ/) | 🟡 In progress | Variable declarations, scope, hoisting and the temporal dead zone |
+| 15 | Closures | [15_chapter_function_closure](15_chapter_function_closure/) | 🟡 In progress | Functions retaining access to variables from their enclosing scope |
+| 16 | Strings | [16_chapter_strings](16_chapter_strings/) | 🟡 In progress | String literals, template strings, character access, searching and checks |
 
 ---
 
@@ -127,7 +133,9 @@ LearnJSTSPlaywright4x/
 ├── 11_chapter_do_while_loops/               # do-while and nested loop practice
 ├── 12_chapter_arrays/                       # Array creation, access, search and transformations
 ├── 13_chapter_functions/                    # Function forms, parameters, returns and arrow functions
-├── 14_chapter_var_let_const_hoisting_TDZ/    # Declaration keywords, scope and initialization
+├── 14_chapter_var_let_const_hoisting_TDZ/    # Declaration keywords, scope, hoisting and TDZ
+├── 15_chapter_function_closure/              # Closures and lexical scope
+├── 16_chapter_strings/                       # String values, properties and search methods
 └── assets/
     └── images/                              # Chapter illustrations and handwritten-style notes
 ```
@@ -658,6 +666,28 @@ Lessons: [`101_Functions.js`](13_chapter_functions/101_Functions.js), [`102_type
 These lessons compare `var`, `let`, and `const`, including function and block scope. The chapter introduces hoisting and the temporal dead zone (TDZ): `var` declarations are initialized to `undefined`, while lexical declarations (`let` and `const`) cannot be accessed before their declaration is evaluated. `const` prevents reassignment of its binding; it does not make an object or array deeply immutable.
 
 Lessons: [`117.js`](14_chapter_var_let_const_hoisting_TDZ/117.js), [`118_Var_let_const.js`](14_chapter_var_let_const_hoisting_TDZ/118_Var_let_const.js), [`119_let.js`](14_chapter_var_let_const_hoisting_TDZ/119_let.js), and [`120_const.js`](14_chapter_var_let_const_hoisting_TDZ/120_const.js).
+
+Additional lessons demonstrate hoisting and the temporal dead zone: [`121_Var_hoisting.js`](14_chapter_var_let_const_hoisting_TDZ/121_Var_hoisting.js), [`122_Let_Hoisting.js`](14_chapter_var_let_const_hoisting_TDZ/122_Let_Hoisting.js), [`123_Fn_Hoisting.js`](14_chapter_var_let_const_hoisting_TDZ/123_Fn_Hoisting.js), [`124_Let_TDZ.js`](14_chapter_var_let_const_hoisting_TDZ/124_Let_TDZ.js), [`125_Let_TDZ.js`](14_chapter_var_let_const_hoisting_TDZ/125_Let_TDZ.js), [`126_Var.js`](14_chapter_var_let_const_hoisting_TDZ/126_Var.js), and [`127_TDZ_TypeOf.js`](14_chapter_var_let_const_hoisting_TDZ/127_TDZ_TypeOf.js). `125_Let_TDZ.js` intentionally triggers a `ReferenceError` to demonstrate access within the TDZ.
+
+---
+
+## Chapter 15: Closures
+
+![Handwritten-style study note about JavaScript closures](assets/images/notes-closures.svg)
+
+A closure is formed when a function retains access to variables from its enclosing lexical scope, even after the outer function has returned. [`128_Closure.js`](15_chapter_function_closure/128_Closure.js) returns an inner function that can still read the `name` variable from `startBrowser`.
+
+Lesson: [`128_Closure.js`](15_chapter_function_closure/128_Closure.js).
+
+---
+
+## Chapter 16: Strings
+
+![Handwritten-style study note about JavaScript strings](assets/images/notes-strings.svg)
+
+Strings represent text and can use single quotes, double quotes, or template literals. The examples cover string length, indexed and negative-index character access, and searching with `includes`, `startsWith`, `endsWith`, `indexOf`, and `lastIndexOf`.
+
+Lessons: [`129_String.js`](16_chapter_strings/129_String.js), [`130_String_Fn.js`](16_chapter_strings/130_String_Fn.js), and [`131_String_Search.js`](16_chapter_strings/131_String_Search.js). The tagged [`131_String_Search.js`](16_chapter_strings/131_String_Search.js) example checks for substrings and prefixes/suffixes, then logs first and last match indexes.
 
 ---
 
