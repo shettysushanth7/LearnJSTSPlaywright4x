@@ -40,6 +40,7 @@ A chapter-by-chapter learning repo for testers moving into JavaScript, TypeScrip
 - [Chapter 14: var, let, const, Hoisting and TDZ](#chapter-14-var-let-const-hoisting-and-tdz)
 - [Chapter 15: Closures](#chapter-15-closures)
 - [Chapter 16: Strings](#chapter-16-strings)
+- [Chapter 17: Objects](#chapter-17-objects)
 - [Coming Up](#coming-up)
 
 ---
@@ -64,7 +65,8 @@ flowchart LR
     C13 --> C14["14 var / let / const"]:::progress
     C14 --> C15["15 Closures"]:::progress
     C15 --> C16["16 Strings"]:::progress
-    C16 --> TS["TypeScript"]:::planned
+    C16 --> C17["17 Objects"]:::progress
+    C17 --> TS["TypeScript"]:::planned
     TS --> PW["Playwright"]:::planned
 
     classDef done fill:#d1fae5,stroke:#059669,color:#064e3b
@@ -95,6 +97,7 @@ flowchart LR
 | 14 | var, let, const, Hoisting and TDZ | [14_chapter_var_let_const_hoisting_TDZ](14_chapter_var_let_const_hoisting_TDZ/) | 🟡 In progress | Variable declarations, scope, hoisting and the temporal dead zone |
 | 15 | Closures | [15_chapter_function_closure](15_chapter_function_closure/) | 🟡 In progress | Functions retaining access to variables from their enclosing scope |
 | 16 | Strings | [16_chapter_strings](16_chapter_strings/) | 🟡 In progress | String literals, template strings, character access, searching and checks |
+| 17 | Objects | [17_Objects-JS](17_Objects-JS/) | 🟡 In progress | Object properties, references, shallow copies and deep copies |
 
 ---
 
@@ -136,6 +139,8 @@ LearnJSTSPlaywright4x/
 ├── 14_chapter_var_let_const_hoisting_TDZ/    # Declaration keywords, scope, hoisting and TDZ
 ├── 15_chapter_function_closure/              # Closures and lexical scope
 ├── 16_chapter_strings/                       # String values, properties and search methods
+├── 17_Objects-JS/                             # Object properties, references and copying
+├── 00_Learning/                               # Supporting explanations and learning references
 └── assets/
     └── images/                              # Chapter illustrations and handwritten-style notes
 ```
@@ -688,6 +693,18 @@ Lesson: [`128_Closure.js`](15_chapter_function_closure/128_Closure.js).
 Strings represent text and can use single quotes, double quotes, or template literals. The examples cover string length, indexed and negative-index character access, and searching with `includes`, `startsWith`, `endsWith`, `indexOf`, and `lastIndexOf`.
 
 Lessons: [`129_String.js`](16_chapter_strings/129_String.js), [`130_String_Fn.js`](16_chapter_strings/130_String_Fn.js), and [`131_String_Search.js`](16_chapter_strings/131_String_Search.js). The tagged [`131_String_Search.js`](16_chapter_strings/131_String_Search.js) example checks for substrings and prefixes/suffixes, then logs first and last match indexes.
+
+---
+
+## Chapter 17: Objects
+
+![Handwritten-style study note about JavaScript objects and copying](assets/images/notes-objects.svg)
+
+Objects store named properties and can be accessed with dot or bracket notation. The examples cover property access and updates, shared references, and the difference between shallow copies and deep copies. In [`139_Shallow_copy_deep_copy.js`](17_Objects-JS/139_Shallow_copy_deep_copy.js), spread copies the outer object but keeps nested objects shared; `structuredClone` creates an independent copy of the nested data.
+
+Lessons: [`132_Objects.js`](17_Objects-JS/132_Objects.js), [`133_Objects_Copy.js`](17_Objects-JS/133_Objects_Copy.js), [`134.js`](17_Objects-JS/134.js), [`135.js`](17_Objects-JS/135.js), [`136_Normal.js`](17_Objects-JS/136_Normal.js), [`137_Config.js`](17_Objects-JS/137_Config.js), [`138_Call_by_ref_by_value.js`](17_Objects-JS/138_Call_by_ref_by_value.js), and [`139_Shallow_copy_deep_copy.js`](17_Objects-JS/139_Shallow_copy_deep_copy.js).
+
+For a visual walkthrough of reference sharing, see [the object reference-copy explainer](00_Learning/obejct_reference_copy.html).
 
 ---
 
