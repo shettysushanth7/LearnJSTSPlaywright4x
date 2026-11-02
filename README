@@ -41,6 +41,7 @@ A chapter-by-chapter learning repo for testers moving into JavaScript, TypeScrip
 - [Chapter 15: Closures](#chapter-15-closures)
 - [Chapter 16: Strings](#chapter-16-strings)
 - [Chapter 17: Objects](#chapter-17-objects)
+- [Chapter 18: Multidimensional Arrays](#chapter-18-multidimensional-arrays)
 - [Coming Up](#coming-up)
 
 ---
@@ -66,7 +67,8 @@ flowchart LR
     C14 --> C15["15 Closures"]:::progress
     C15 --> C16["16 Strings"]:::progress
     C16 --> C17["17 Objects"]:::progress
-    C17 --> TS["TypeScript"]:::planned
+    C17 --> C18["18 Multidimensional Arrays"]:::progress
+    C18 --> TS["TypeScript"]:::planned
     TS --> PW["Playwright"]:::planned
 
     classDef done fill:#d1fae5,stroke:#059669,color:#064e3b
@@ -98,6 +100,7 @@ flowchart LR
 | 15 | Closures | [15_chapter_function_closure](15_chapter_function_closure/) | 🟡 In progress | Functions retaining access to variables from their enclosing scope |
 | 16 | Strings | [16_chapter_strings](16_chapter_strings/) | 🟡 In progress | String literals, template strings, character access, searching and checks |
 | 17 | Objects | [17_Objects-JS](17_Objects-JS/) | 🟡 In progress | Object properties, references, shallow copies and deep copies |
+| 18 | Multidimensional Arrays | [18_Multi_Dimensional_array](18_Multi_Dimensional_array/) | 🟡 In progress | Nested arrays, rows and columns, matrix traversal and patterns |
 
 ---
 
@@ -140,6 +143,7 @@ LearnJSTSPlaywright4x/
 ├── 15_chapter_function_closure/              # Closures and lexical scope
 ├── 16_chapter_strings/                       # String values, properties and search methods
 ├── 17_Objects-JS/                             # Object properties, references and copying
+├── 18_Multi_Dimensional_array/                # Nested arrays, matrices and loop patterns
 ├── 00_Learning/                               # Supporting explanations and learning references
 └── assets/
     └── images/                              # Chapter illustrations and handwritten-style notes
@@ -705,6 +709,16 @@ Objects store named properties and can be accessed with dot or bracket notation.
 Lessons: [`132_Objects.js`](17_Objects-JS/132_Objects.js), [`133_Objects_Copy.js`](17_Objects-JS/133_Objects_Copy.js), [`134.js`](17_Objects-JS/134.js), [`135.js`](17_Objects-JS/135.js), [`136_Normal.js`](17_Objects-JS/136_Normal.js), [`137_Config.js`](17_Objects-JS/137_Config.js), [`138_Call_by_ref_by_value.js`](17_Objects-JS/138_Call_by_ref_by_value.js), and [`139_Shallow_copy_deep_copy.js`](17_Objects-JS/139_Shallow_copy_deep_copy.js).
 
 For a visual walkthrough of reference sharing, see [the object reference-copy explainer](00_Learning/obejct_reference_copy.html).
+
+---
+
+## Chapter 18: Multidimensional Arrays
+
+![Handwritten-style study note about JavaScript multidimensional arrays and nested loops](assets/images/notes-multidimensional-arrays.svg)
+
+An array can contain other arrays, making it useful for grids and test matrices. The examples access and update a row/column value, traverse nested arrays with nested loops, and reduce each row to a sum. Pattern exercises use nested loops to print right-aligned, left-aligned, and centered pyramids.
+
+Lessons: [`140_MD_Arrays.js`](18_Multi_Dimensional_array/140_MD_Arrays.js), [`141_2D.js`](18_Multi_Dimensional_array/141_2D.js), [`142_Real_Example.js`](18_Multi_Dimensional_array/142_Real_Example.js), [`143_Array_fn.js`](18_Multi_Dimensional_array/143_Array_fn.js), [`144_right_Hand_Pattern.js`](18_Multi_Dimensional_array/144_right_Hand_Pattern.js), [`145_Left_Hand_Pattern.js`](18_Multi_Dimensional_array/145_Left_Hand_Pattern.js), and [`146_Pyramid_pattern.js`](18_Multi_Dimensional_array/146_Pyramid_pattern.js).
 
 ---
 
