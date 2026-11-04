@@ -42,6 +42,9 @@ A chapter-by-chapter learning repo for testers moving into JavaScript, TypeScrip
 - [Chapter 16: Strings](#chapter-16-strings)
 - [Chapter 17: Objects](#chapter-17-objects)
 - [Chapter 18: Multidimensional Arrays](#chapter-18-multidimensional-arrays)
+- [Chapter 19: Callbacks](#chapter-19-callbacks)
+- [Chapter 20: Promises](#chapter-20-promises)
+- [Chapter 21: Async/Await](#chapter-21-asyncawait)
 - [Coming Up](#coming-up)
 
 ---
@@ -68,7 +71,10 @@ flowchart LR
     C15 --> C16["16 Strings"]:::progress
     C16 --> C17["17 Objects"]:::progress
     C17 --> C18["18 Multidimensional Arrays"]:::progress
-    C18 --> TS["TypeScript"]:::planned
+    C18 --> C19["19 Callbacks"]:::progress
+    C19 --> C20["20 Promises"]:::progress
+    C20 --> C21["21 Async/Await"]:::progress
+    C21 --> TS["TypeScript"]:::planned
     TS --> PW["Playwright"]:::planned
 
     classDef done fill:#d1fae5,stroke:#059669,color:#064e3b
@@ -101,6 +107,9 @@ flowchart LR
 | 16 | Strings | [16_chapter_strings](16_chapter_strings/) | 🟡 In progress | String literals, template strings, character access, searching and checks |
 | 17 | Objects | [17_Objects-JS](17_Objects-JS/) | 🟡 In progress | Object properties, references, shallow copies and deep copies |
 | 18 | Multidimensional Arrays | [18_Multi_Dimensional_array](18_Multi_Dimensional_array/) | 🟡 In progress | Nested arrays, rows and columns, matrix traversal and patterns |
+| 19 | Callbacks | [19_Callbacks](19_Callbacks/) | 🟡 In progress | Passing functions to run after synchronous or asynchronous work |
+| 20 | Promises | [20_Promise](20_Promise/) | 🟡 In progress | Promise states, chaining, errors, cleanup and concurrent operations |
+| 21 | Async/Await | [21_Async_await](21_Async_await/) | 🟡 In progress | Async functions, promises and awaiting resolved values |
 
 ---
 
@@ -144,6 +153,9 @@ LearnJSTSPlaywright4x/
 ├── 16_chapter_strings/                       # String values, properties and search methods
 ├── 17_Objects-JS/                             # Object properties, references and copying
 ├── 18_Multi_Dimensional_array/                # Nested arrays, matrices and loop patterns
+├── 19_Callbacks/                              # Callback functions and asynchronous sequencing
+├── 20_Promise/                                 # Promise chaining, errors and concurrency
+├── 21_Async_await/                            # Async functions and await
 ├── 00_Learning/                               # Supporting explanations and learning references
 └── assets/
     └── images/                              # Chapter illustrations and handwritten-style notes
@@ -719,6 +731,36 @@ For a visual walkthrough of reference sharing, see [the object reference-copy ex
 An array can contain other arrays, making it useful for grids and test matrices. The examples access and update a row/column value, traverse nested arrays with nested loops, and reduce each row to a sum. Pattern exercises use nested loops to print right-aligned, left-aligned, and centered pyramids.
 
 Lessons: [`140_MD_Arrays.js`](18_Multi_Dimensional_array/140_MD_Arrays.js), [`141_2D.js`](18_Multi_Dimensional_array/141_2D.js), [`142_Real_Example.js`](18_Multi_Dimensional_array/142_Real_Example.js), [`143_Array_fn.js`](18_Multi_Dimensional_array/143_Array_fn.js), [`144_right_Hand_Pattern.js`](18_Multi_Dimensional_array/144_right_Hand_Pattern.js), [`145_Left_Hand_Pattern.js`](18_Multi_Dimensional_array/145_Left_Hand_Pattern.js), and [`146_Pyramid_pattern.js`](18_Multi_Dimensional_array/146_Pyramid_pattern.js).
+
+---
+
+## Chapter 19: Callbacks
+
+![Handwritten-style study note about JavaScript callbacks](assets/images/notes-callbacks.svg)
+
+A callback is a function passed to other code to be called later. The lessons compare synchronous callbacks (such as array iteration) with asynchronous callbacks (such as timers), and show how nested callbacks can make a sequence difficult to follow.
+
+Lessons: [`147_calbacks.js`](19_Callbacks/147_calbacks.js), [`148_More.js`](19_Callbacks/148_More.js), [`149_CB_Sync.js`](19_Callbacks/149_CB_Sync.js), [`150_CB_Async.js`](19_Callbacks/150_CB_Async.js), [`151_Callback_Hell.js`](19_Callbacks/151_Callback_Hell.js), [`152_Real_QA.js`](19_Callbacks/152_Real_QA.js), [`153_Callback_Return.js`](19_Callbacks/153_Callback_Return.js), and [`154_pyramid_DOM.js`](19_Callbacks/154_pyramid_DOM.js).
+
+---
+
+## Chapter 20: Promises
+
+![Handwritten-style study note about JavaScript promises](assets/images/notes-promises.svg)
+
+A Promise represents work that may complete later, either fulfilling with a value or rejecting with an error. The examples introduce `.then()`, `.catch()`, `.finally()`, chaining, and coordination with `Promise.all`, `Promise.allSettled`, and `Promise.race`.
+
+Lessons: [`155_Promise.js`](20_Promise/155_Promise.js), [`156_Promise_finally.js`](20_Promise/156_Promise_finally.js), [`157_Promise_improve.js`](20_Promise/157_Promise_improve.js), [`158_promise_all.js`](20_Promise/158_promise_all.js), [`159_Promise_settle.js`](20_Promise/159_Promise_settle.js), [`160_Promise_race.js`](20_Promise/160_Promise_race.js), and [`161_IQ.js`](20_Promise/161_IQ.js).
+
+---
+
+## Chapter 21: Async/Await
+
+![Handwritten-style study note about JavaScript async and await](assets/images/notes-async-await.svg)
+
+An `async` function always returns a Promise. `await` can be used inside an async function to pause that function until a Promise settles, then provide its fulfillment value or throw its rejection reason.
+
+Lesson: [`162_Async_Await.js`](21_Async_await/162_Async_Await.js).
 
 ---
 
