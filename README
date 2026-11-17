@@ -45,6 +45,7 @@ A chapter-by-chapter learning repo for testers moving into JavaScript, TypeScrip
 - [Chapter 19: Callbacks](#chapter-19-callbacks)
 - [Chapter 20: Promises](#chapter-20-promises)
 - [Chapter 21: Async/Await](#chapter-21-asyncawait)
+- [Chapter 22: Export and Import](#chapter-22-export-and-import)
 - [Coming Up](#coming-up)
 
 ---
@@ -110,6 +111,7 @@ flowchart LR
 | 19 | Callbacks | [19_Callbacks](19_Callbacks/) | 🟡 In progress | Passing functions to run after synchronous or asynchronous work |
 | 20 | Promises | [20_Promise](20_Promise/) | 🟡 In progress | Promise states, chaining, errors, cleanup and concurrent operations |
 | 21 | Async/Await | [21_Async_await](21_Async_await/) | 🟡 In progress | Async functions, promises and awaiting resolved values |
+| 22 | Export and Import | [22_Export_Import](22_Export_Import/) | 🟡 In progress | Sharing values with named and default exports, then importing them |
 
 ---
 
@@ -156,7 +158,9 @@ LearnJSTSPlaywright4x/
 ├── 19_Callbacks/                              # Callback functions and asynchronous sequencing
 ├── 20_Promise/                                 # Promise chaining, errors and concurrency
 ├── 21_Async_await/                            # Async functions and await
+├── 22_Export_Import/                           # Named and default exports and imports
 ├── 00_Learning/                               # Supporting explanations and learning references
+│   └── default-vs-named-exports.pdf            # Beginner-friendly export notes
 └── assets/
     └── images/                              # Chapter illustrations and handwritten-style notes
 ```
@@ -761,6 +765,16 @@ Lessons: [`155_Promise.js`](20_Promise/155_Promise.js), [`156_Promise_finally.js
 An `async` function always returns a Promise. `await` can be used inside an async function to pause that function until a Promise settles, then provide its fulfillment value or throw its rejection reason.
 
 Lesson: [`162_Async_Await.js`](21_Async_await/162_Async_Await.js).
+
+---
+
+## Chapter 22: Export and Import
+
+![Handwritten-style study note about JavaScript named and default exports](assets/images/notes-exports.svg)
+
+A named export is imported by its exported name, usually inside braces. A default export is imported without braces, and the importing file can choose its local name. A module can have multiple named exports, but only one default export.
+
+For a beginner-friendly explanation and examples, see the [default vs. named exports PDF notes](00_Learning/default-vs-named-exports.pdf).
 
 ---
 
